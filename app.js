@@ -49,8 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if(i==0 || isNaN(i)){
                 alert("Enter Valid Number")
             }
+            if(i>=1){
+                alert("Now u can't get 100 or More...")
+            }
             else{
-                const x = parseFloat(localStorage.getItem('x'));
+            const x = parseFloat(localStorage.getItem('x'));
             const y = parseFloat(localStorage.getItem('y')); 
             let result = Math.ceil((i*y-x)/(1-i));
             if(result >= 6){
