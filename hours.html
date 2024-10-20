@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFI Attendance Calculator</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="left-bar">
+            <div><h1>Your current Percentage.....</h1></div>
+            <div><p>67%</p></div>
+        </div>
+        <div class="divider"></div>
+        <div class="right-bar">
+            <div>
+                <label for="percentage">Percentage...</label>
+                <input placeholder="Enter your target Percentage" type="number" id="percentage" name="bunk"  min="0" oninput="validity.valid||(value='');">
+            </div>
+            <div><button class="submit-percentage">Submit</button></div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFI Attendance Calculator</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="left-bar">
+            <div><h1>Your current Percentage.....</h1></div>
+            <div><p>67%</p></div>
+        </div>
+        <div class="divider"></div>
+        <div class="right-bar">
+            <div><h1>Fill These Up...</h1></div>
+            <div>
+                <label for="bunk">Bunk hrs.</label>
+                <input placeholder="Enter no.of hrs you want to bunk" type="number" id="bunk"  min="0" oninput="validity.valid||(value='');">
+            </div>
+            <div>
+                <label for="attend">Attending hrs.</label>
+                <input placeholder="Enter no.of hrs you want to attend" type="number" id="attend"  min="0" oninput="validity.valid||(value='');">
+            </div>
+            <div><button class="submit-hours">Submit</button></div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
