@@ -53,18 +53,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert("Now u can't get 100 or More...")
             }
             else{
-            const x = parseFloat(localStorage.getItem('x'));
-            const y = parseFloat(localStorage.getItem('y')); 
-            let result = Math.ceil((i*y-x)/(1-i));
-            if(result >= 6){
-                result = Math.ceil(result/6);
-                left_title.innerText = "You need to attend..."
-                percentageDisplay.innerHTML = `<p>${result}<span style="font-size: 1.5rem">days...</span></p>`;
-            }
-            else{
-                left_title.innerText = "You need to attend..."
-                percentageDisplay.innerHTML = `<p>${result}<span style="font-size: 1.5rem">hrs...</span></p>`;
-            }
+                const x = parseFloat(localStorage.getItem('x'));
+                const y = parseFloat(localStorage.getItem('y'));
+                let result;
+                if(x/y>i){
+                    left_title.innerText = "You can bunk..."
+                    result = Math.floor((x-i*y)/(i));
+                }
+                else{
+                    left_title.innerText = "You need to attend..."
+                    result = Math.ceil((i*y-x)/(1-i));
+                } 
+                
+                if(result >= 6){
+                    result = Math.ceil(result/6);
+                    percentageDisplay.innerHTML = `<p>${result}<span style="font-size: 1.5rem">days...</span></p>`;
+                }
+                else{
+                    percentageDisplay.innerHTML = `<p>${result}<span style="font-size: 1.5rem">hrs...</span></p>`;
+                }
             }
         })
     }
